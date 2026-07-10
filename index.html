@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Memory Card Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="container">
+
+        <h1>🧠 Memory Card Game</h1>
+
+        <h2 id="welcome"></h2>
+
+        <!-- Game Info -->
+        <div class="info">
+
+            <div class="box">
+                <h3>Moves</h3>
+                <span id="moves">0</span>
+            </div>
+
+            <div class="box">
+                <h3>Matched</h3>
+                <span id="matched">0 / 8</span>
+            </div>
+
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+
+            <button id="restart">
+                🔄 Restart Game
+            </button>
+
+            <button id="logout">
+                🚪 Logout
+            </button>
+
+        </div>
+
+        <!-- Memory Cards -->
+        <div class="game-board" id="gameBoard">
+
+        </div>
+
+    </div>
+
+    <!-- Win Popup -->
+    <div id="winPopup" class="popup">
+
+        <div class="popup-content">
+
+            <h2>🎉 Congratulations!</h2>
+
+            <p>You matched all the cards.</p>
+
+            <p>
+                Total Moves:
+                <strong id="finalMoves"></strong>
+            </p>
+
+            <button onclick="closePopup()">
+                Play Again
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

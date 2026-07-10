@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game - Login</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(135deg,#4facfe,#00f2fe);
+        }
+
+        .container{
+            width:380px;
+            background:#fff;
+            padding:35px;
+            border-radius:15px;
+            text-align:center;
+            box-shadow:0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .logo{
+            font-size:60px;
+            margin-bottom:10px;
+        }
+
+        h1{
+            color:#333;
+            margin-bottom:10px;
+        }
+
+        p{
+            color:#666;
+            margin-bottom:25px;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin-bottom:20px;
+            border:2px solid #ddd;
+            border-radius:8px;
+            font-size:16px;
+            outline:none;
+        }
+
+        input:focus{
+            border-color:#4facfe;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#4facfe;
+            color:white;
+            font-size:18px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#2196f3;
+        }
+
+        .footer{
+            margin-top:20px;
+            font-size:14px;
+            color:#777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="logo">🧠</div>
+
+        <h1>Memory Card Game</h1>
+
+        <p>Enter your name to begin</p>
+
+        <input
+            type="text"
+            id="playerName"
+            placeholder="Enter Your Name"
+        >
+
+        <button onclick="startGame()">
+            Start Game
+        </button>
+
+        <div class="footer">
+            welcome to the memory card game! Match all the cards to win.
+        </div>
+
+    </div>
+
+<script>
+
+function startGame(){
+
+    let name = document.getElementById("playerName").value.trim();
+
+    if(name===""){
+        alert("Please enter your name.");
+        return;
+    }
+
+    localStorage.setItem("playerName",name);
+
+    window.location.href="index.html";
+}
+
+</script>
+
+</body>
+</html>
