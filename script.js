@@ -162,7 +162,7 @@ document.getElementById("logout").addEventListener("click", () => {
 
     localStorage.removeItem("playerName");
 
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 
 });
 
